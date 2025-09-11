@@ -8,10 +8,13 @@ resource "aws_s3_bucket" "website_bucket" {
 }
 
 # Allow public access - Disabled for now to prepare for CloudFront
-# resource "aws_s3_bucket_acl" "acl" {
-#     bucket = aws_s3_bucket.website_bucket.id
-#     acl = "public-read"
-# }
+resource "aws_s3_bucket_public_access_block" "pab" {
+    bucket                  = aws_s3_bucket.website_bucket.id
+    block_public_acls       = false
+    ignore_public_acls      = false
+    block_public_policy     = false
+    restrict_public_buckets = false
+}
 
 # Enable versioning
 resource "aws_s3_bucket_versioning" "versioning" {
@@ -38,10 +41,11 @@ resource "aws_s3_bucket_policy" "bucket_policy"{
         Version = "2012-10-17"
         Statement = [
             {
-                Effect = "Allow"
-                Principal = "*"
-                Action = "s3:GetObject"
-                Resource = "${aws_s3_bucket.website_bucket.arn}/*"
+                Sid: "PublicReadGetObject",
+			    Effect: "Allow",
+			    Principal: "*",
+			    Action: "s3:GetObject",
+			    Resource = "${aws_s3_bucket.website_bucket.arn}/*"
             }
         ]
     })
@@ -53,6 +57,6 @@ resource "aws_s3_bucket_policy" "bucket_policy"{
 resource "aws_s3_object" "index_html"{
     bucket = aws_s3_bucket.website_bucket.id
     key = "index.html"
-    source = "${path.root}/../website/index.html"
+    source = "${path.root}/../../../website/index.html"
     content_type = "text/html"
 }
