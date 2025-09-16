@@ -6,7 +6,7 @@
     <title>Isaac Shin - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="min-h-screen">
@@ -18,6 +18,12 @@
                 <button data-section="projects"  class="nav-dot"           aria-label="Go to Projects"></button>
                 <button data-section="experience"  class="nav-dot"           aria-label="Go to Experience"></button>
                 <button data-section="skills"   class="nav-dot"           aria-label="Go to Skills"></button>
+
+                <!-- Dark/Light theme toggle -->
+                <button id="theme-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>                    
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                </button>
             </div>
         </nav>
 
@@ -27,6 +33,7 @@
                 <div class="container">
                     <div class="hero-content">
                         <div class="hero-text">
+                            <h1>Isaac Shin</h1>
                             <h1 class="hero-title">Aspiring Cloud Security Engineer</h1>
                             <p class="hero-description">
                                 Cybersecurity student @ DePaul University with a passion for cloud security solutions.
@@ -66,7 +73,7 @@
                             <div class="project-content">
                                 <h3 class="project-title">AWS Cloud Resume</h3>
                                 <p class="project-description">
-                                    • Built and deployed a static resume website with S3, CloudFront & Route 53 for custom domain name and HTTPS
+                                    • Developed and deployed a static resume website using S3, CloudFront, and Route 53, implementing distribution with a custom domain and HTTPS
                                     <br>
                                     • Automated full-stack deployments with Terraform (IaC) and GitHub Actions for CI/CD
                                     <br>
@@ -109,11 +116,11 @@
                                 <h3 class="experience-title">Crew Member</h3>
                                 <h5 class="experience-company">Chipotle</h2>
                                 <p class="experience-description">
-                                    • Operated kitchenware equipment and maintained cleanliness, ensuring compliance with FDA health and safety standards
+                                    • Operating kitchenware equipment and maintaining cleanliness, ensuring compliance with FDA health and safety standards
                                     <br>
-                                    • Executed closing prep tasks efficiently (food storage, station cleaning, sanitation), reducing closing times by ∼30 minutes per shift
+                                    • Executing closing prep tasks efficiently (food storage, station cleaning, sanitation), reducing closing times by ∼30 minutes per shift
                                     <br>
-                                    • Collaborated with kitchen staff to support efficient workflow, serving 200+ customers per shift
+                                    • Collaborating with kitchen staff to support efficient workflow, serving 200+ customers per shift
                                 </p>
                             </div>
                         </div>
@@ -170,7 +177,7 @@
             <!-- Skills section -->
             <section id="skills" class="skills-section">
                 <div class="container">
-                    <h2 class="section-title">Skills Stack</h2>
+                    <h2 class="section-title">Skills</h2>
                     <div class="skills-grid">
 
                         <div class="skills-card">
@@ -219,7 +226,7 @@
                                 <span class="skill-tag">IaC</span>
                                 <span class="skill-tag">IAM</span>
                                 <span class="skill-tag">CI/CD Automation</span>
-                                <span class="skill-tag">Networking</span>
+                                <span class="skill-tag">Network & System Security</span>
                                 <span class="skill-tag">Compliance & Risk Management</span>
                             </div>
                         </div>
@@ -228,11 +235,11 @@
                 </div>
             </section>
 
-        <footer class="footer">
+        <!-- <footer class="footer">
             <div class="container footer-content">
                 <p class="footer-text">© 2025 Isaac Shin. All rights reserved.</p>
             </div>
-        </footer>
+        </footer> -->
     </div>
 </body>
 </html>
