@@ -60,3 +60,17 @@ resource "aws_s3_object" "index_html"{
     source = "${path.root}/../../../website/index.html"
     content_type = "text/html"
 }
+
+resource "aws_s3_object" "index_css"{
+    bucket = aws_s3_bucket.website_bucket.id
+    key = "styles.css"
+    source = "${path.root}/../../../website/styles.css"
+    content_type = "text/css"
+}
+
+resource "aws_s3_object" "index_js"{
+    bucket = aws_s3_bucket.website_bucket.id
+    key = "script.js"
+    source = "${path.root}/../../../website/script.js"
+    content_type = "application/javascript"
+}
