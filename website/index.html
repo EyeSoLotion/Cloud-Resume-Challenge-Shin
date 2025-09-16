@@ -1,17 +1,237 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Test Bucket Website</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaac Shin - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="min-h-screen">
+        
+        <!-- Side Dot Navigation -->
+        <nav class="side-nav" aria-label="Section navigation">
+            <div class="side-nav-dots">
+                <button data-section="about"     class="nav-dot is-active" aria-label="Go to About"></button>
+                <button data-section="projects"  class="nav-dot"           aria-label="Go to Projects"></button>
+                <button data-section="experience"  class="nav-dot"           aria-label="Go to Experience"></button>
+                <button data-section="skills"   class="nav-dot"           aria-label="Go to Skills"></button>
+            </div>
+        </nav>
 
-    <div class="container-fluid">
-        <p>
-            Hi, I am ISAAC SHIN!!!!
-        </p>
+        <!-- Hero Section -->
+        <main class="main-content">
+            <section id="about" class="hero-section">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <h1 class="hero-title">Aspiring Cloud Security Engineer</h1>
+                            <p class="hero-description">
+                                Cybersecurity student with a passion for cloud security solutions.
+                            </p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/EyeSoLotion" target="_blank" class="social-btn" aria-label="GitHub">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/eyeshin/" target="_blank" class="social-btn" aria-label="LinkedIn">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:ishin7921@gmail.com" class="social-btn" aria-label="Email">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="projects-section">
+                <div class="container">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="projects-grid">
+
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">AWS Cloud Resume</h3>
+                                <p class="project-description">
+                                    • Built and deployed a static resume website with S3, CloudFront & Route 53 for custom domain name and HTTPS
+                                    <br>
+                                    • Automated full-stack deployments with Terraform (IaC) and GitHub Actions for CI/CD
+                                    <br>
+                                    • Implementing a serverless backend using DynamoDB, API Gateway (REST API), and Lambda to track visitors
+                                    <br>
+                                    • Integrating Python/boto3 backend logic to calculate site visits and JavaScript frontend logic to fetch and display them dynamically
+                                </p>
+
+                                <div class="project-tags">
+                                    <span class="tag">AWS</span>
+                                    <span class="tag">Terraform</span>
+                                    <span class="tag">Python</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">Git</span>
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://github.com/EyeSoLotion/Cloud-Resume-Challenge-Shin" target="_blank" class="project-link">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                    View on GitHub
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="experience-section">
+                <div class="container">
+                    <h2 class="section-title">Experience</h2>
+                    <div class="experience-grid">
+
+                        <div class="experience-card">
+                            <div class="experience-year">2025 — Present</div>
+                            <div class="experience-content">
+                                <h3 class="experience-title">Crew Member</h3>
+                                <h5 class="experience-company">Chipotle</h2>
+                                <p class="experience-description">
+                                    • Operated kitchenware equipment and maintained cleanliness, ensuring compliance with FDA health and safety standards
+                                    <br>
+                                    • Executed closing prep tasks efficiently (food storage, station cleaning, sanitation), reducing closing times by ∼30 minutes per shift
+                                    <br>
+                                    • Collaborated with kitchen staff to support efficient workflow, serving 200+ customers per shift
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="experience-card">
+                            <div class="experience-year">2024 — 2025</div>
+                            <div class="experience-content">
+                                <h3 class="experience-title">Package Handler</h3>
+                                <h5 class="experience-company">FedEx</h2>
+                                <p class="experience-description">
+                                    • Loaded, unloaded, and sorted 500+ packages per shift in a high-volume warehouse environment
+                                    <br>
+                                    • Collaborated with 40+ team members and managers daily to streamline operations, reducing missorted packages by ∼28%
+                                    <br>
+                                    • Lifted and moved packages up to 75 lbs, adhering to proper safety techniques and policies to prevent injury and damage
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="experience-card">
+                            <div class="experience-year">2024 — 2025</div>
+                            <div class="experience-content">
+                                <h3 class="experience-title">Game Developer</h3>
+                                <h5 class="experience-company">36 Studios</h2>
+                                <p class="experience-description">
+                                    • Implemented full-stack logic through various data structures and techniques (arrays, dictionaries, recursion) to support 120+ unique in-game interactions and mechanics
+                                    <br>
+                                    • Optimized memory and asset usage, reducing latency and improving in-game performance by ∼42%
+                                    <br>
+                                    • Collaborated with a 12-person team to develop AI-driven NPCs, dialogue systems, and map design managed via Trello, contributing to a beta release tested by 200+ players
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="experience-card">
+                            <div class="experience-year">2021 — 2022</div>
+                            <div class="experience-content">
+                                <h3 class="experience-title">Assistant Coach</h3>
+                                <h5 class="experience-company">John Ulrich Basketball</h2>
+                                <p class="experience-description">
+                                    • Led 80+ team practices and individual training sessions, mentoring athletes to build skills, teamwork, and discipline
+                                    <br>
+                                    • Managed game and practice logistics for 40+ athletes over the course of 2 years
+                                    <br>
+                                    • Took initiative in developing structured drills and strategies, contributing to net-positive season records
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="skills-section">
+                <div class="container">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="skills-grid">
+
+                        <div class="skills-card">
+                            <h3 class="skills-category">Languages</h3>
+                            <div class="skills-skills">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">Lua</span>
+                                <span class="skill-tag">HTML/CSS</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-card">
+                            <h3 class="skills-category">Cloud Tools (AWS)</h3>
+                            <div class="skills-skills">
+                                <span class="skill-tag">IAM</span>
+                                <span class="skill-tag">S3</span>
+                                <span class="skill-tag">CloudFront</span>
+                                <span class="skill-tag">Route 53</span>
+                                <span class="skill-tag">DynamoDB</span>
+                                <span class="skill-tag">Lambda</span>
+                                <span class="skill-tag">API Gateway</span>
+                                <span class="skill-tag">Terraform</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-card">
+                            <h3 class="skills-category">Developer Tools & Platforms</h3>
+                            <div class="skills-skills">
+                                <span class="skill-tag">Git/GitHub</span>
+                                <span class="skill-tag">Linux</span>
+                                <span class="skill-tag">Wireshark</span>
+                                <span class="skill-tag">VMWare</span>
+                                <span class="skill-tag">Packet Tracer</span>
+                                <span class="skill-tag">VS Code</span>
+                                <span class="skill-tag">Trello</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-card">
+                            <h3 class="skills-category">Core Competencies</h3>
+                            <div class="skills-skills">
+                                <span class="skill-tag">Cloud Security</span>
+                                <span class="skill-tag">IaC</span>
+                                <span class="skill-tag">IAM</span>
+                                <span class="skill-tag">CI/CD Automation</span>
+                                <span class="skill-tag">Networking</span>
+                                <span class="skill-tag">Compliance & Risk Management</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        <footer class="footer">
+            <div class="container footer-content">
+                <p class="footer-text">© 2025 Isaac Shin. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
-
-  </body>
+</body>
 </html>
