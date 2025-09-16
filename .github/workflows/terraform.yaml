@@ -1,4 +1,4 @@
-name: "Terraform CI"
+name: "Front-end CI"
 
 on:
   push:
@@ -8,15 +8,15 @@ on:
       - 'website/**'
 
 jobs:
-  deploy-frontend-code:
+  deploy-terraform:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout code
+    # Checkout
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v5
 
-    # Step 2: Upload files to S3
+    # Upload new, update changed, delete removed
     - name: Upload files to S3
       run: |
         aws s3 sync ./website s3://${{ vars.AWS_S3_BUCKET }} --delete --exclude '.DS_Store'

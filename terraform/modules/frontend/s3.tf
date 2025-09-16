@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "website_bucket" {
     bucket = "crctestbucket1"
 
     tags = {
-      Name = "First test tag"
+      Name = "Test tag"
     }
 }
 
