@@ -251,7 +251,6 @@ body::-webkit-scrollbar {
 .project-card {
   border: 1px solid var(--border);
   border-radius: 0.5rem;
-  overflow: hidden;
   background-color: var(--base-color);
   transition: transform 0.2s;
 }
