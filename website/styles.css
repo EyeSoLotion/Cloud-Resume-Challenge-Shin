@@ -168,6 +168,7 @@ body::-webkit-scrollbar {
 /* HERO */
 .hero-section {
   padding: 3rem 0 6rem;
+  opacity: 0;
   min-height: 100vh;
   display: grid;
   place-items: center;
