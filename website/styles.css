@@ -270,6 +270,12 @@ body::-webkit-scrollbar {
   margin-bottom: 0.5rem;
 }
 
+.project-date {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: -0.5rem;
+}
+
 .project-description {
   font-size: 0.875rem;
   color: var(--secondary-text);
