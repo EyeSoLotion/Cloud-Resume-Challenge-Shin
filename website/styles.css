@@ -453,7 +453,7 @@ body::-webkit-scrollbar {
 
 /* ANIMATIONS */
 .animate-fade-in-up {
-  animation: fade-in-up 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fade-in-up 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes fade-in-up {
