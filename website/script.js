@@ -1,3 +1,28 @@
+const swiper = new Swiper('.wrapper', {
+  loop: true,
+  spaceBetween: 30,
+
+  // Autoplay 
+  autoplay: {
+    delay: 15000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+
+  // Pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
 document.addEventListener('DOMContentLoaded', function(){
     // Navigation functionality
     const navDots = document.querySelectorAll('.nav-dot');

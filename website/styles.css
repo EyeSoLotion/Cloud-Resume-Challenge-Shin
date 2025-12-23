@@ -28,7 +28,7 @@
   --nav-bg: #b8b7b759;
   --nav-hover: #f0eeee99;
 
-  --border: #e2e8f03d;
+  --border: #e2e8f025;
 
   --social-btn-bg-hover: #dadada;
   --social-btn-hover: #000000;
@@ -239,17 +239,21 @@ body::-webkit-scrollbar {
   opacity: 0;
   min-height: 100vh;
   display: grid;
-  place-items: center;
-}
-
-.projects-grid {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
 }
 
-.project-card {
+.wrapper {
+  max-width: 1000px;
+  padding: 20px 10px;
+  margin: 0 60px 35px;
+  overflow: hidden;
+}
+
+.wrapper .project-card {
+  display: flex;
+  flex-direction: column;
+
   border: 1px solid var(--border);
   border-radius: 0.5rem;
   background-color: var(--base-color);
@@ -472,3 +476,23 @@ body::-webkit-scrollbar {
     transform: translateY(0);
   }
 } 
+
+/* SWIPER */
+.swiper-pagination-bullet {
+  height: 15px;
+  width: 15px;
+  overflow: hidden;
+  opacity: 1;
+  background-color: var(--nav-bg);
+}
+
+.swiper :where(.swiper-button-prev, .swiper-button-next) {
+  color: var(--nav-bg);
+  margin-top: -35px;
+  transition: all 0.3s ease;
+}
+
+.swiper :where(.swiper-button-prev, .swiper-button-next)
+:hover {
+  color: var(--nav-hover);
+}
