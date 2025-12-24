@@ -1,6 +1,8 @@
+// SWIPER CONFIGS
 const swiper = new Swiper('.wrapper', {
   loop: true,
   spaceBetween: 30,
+  speed: 410,
 
   // Autoplay 
   autoplay: {
